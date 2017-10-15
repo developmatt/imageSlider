@@ -1,6 +1,8 @@
 $(document).ready(function(){
 	var counter = 0;
 	marginLeft = 0;
+
+	//Buttons actions
 	$('.front').on('click', function(){
 		if(counter < images.length - 1){
 			counter++;
@@ -17,6 +19,7 @@ $(document).ready(function(){
 		}
 	});
 
+	//Scrolling miniatures
 	function scroll(){
 		if(counter > 2){
 			var boxWidth = $('.miniature-box').width();

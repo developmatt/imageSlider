@@ -41,6 +41,7 @@
 		}
 	?>
 	<script type="text/javascript">
+		//Populating javascript images string (will be used in script.js)
 		var images = [<?= $strImage; ?>];
 	</script>
 	<div class="slider-image">
@@ -49,22 +50,22 @@
 			<img src="https://yt3.ggpht.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAAAAAA/OixOH_h84Po/s900-c-k-no-mo-rj-c0xffffff/photo.jpg">
 		</div>
 		<div class="miniatures">
-
+			<!-- Button back -->
 			<button type="button" class="button back">Back</button>
 
 			<?php
 				$counter = 0;
 				foreach($images as $image) :
 			?>
-				<div class="miniature-box box-<?= $counter ?>">
+				<!-- Building list of miniatures -->
+				<div class="miniature-box">
 					<img src="<?= $image ?>" alt="">
 				</div>
 			<?php
-				$counter++;
 				endforeach;
 			?>
 
-
+			<!-- Button front -->
 			<button type="button" class="button front">Front</button>
 
 		</div>
